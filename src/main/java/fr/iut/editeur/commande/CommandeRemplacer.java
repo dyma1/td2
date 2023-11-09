@@ -16,7 +16,6 @@ public class CommandeRemplacer extends CommandeDocument{
         }
         int debut = Integer.parseInt(parameters[1]);
         int fin = Integer.parseInt(parameters[2]);
-        System.out.println(parameters.length);
         if(parameters.length<4) this.document.remplacer(debut, fin, "");
         else this.document.remplacer(debut, fin, parameters[3]);
         super.executer();
