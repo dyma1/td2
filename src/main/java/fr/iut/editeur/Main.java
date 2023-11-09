@@ -20,7 +20,6 @@ public class Main {
             Commande commande = factory.createCommand(nomCommande, document, parameters);
             if(commande != null) {
                 invoker.executer(commande);
-                System.out.println("bug volontaire");
             }
             else {
                 System.err.println("Cette commande n'existe pas!");
