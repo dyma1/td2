@@ -16,5 +16,9 @@ jobs:
           with:
             java-version: '17'
             distribution: 'adopt'
+
+        - name : compilation
+          run: mvn -B compile
+
         - name: mvn test
         - run: mvn -B test --file pom.xml
