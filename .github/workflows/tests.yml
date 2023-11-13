@@ -5,9 +5,9 @@ jobs:
     tests:
       name: Exécuter les tests JUnit
       runs-on: ubuntu-latest
+      with:
+        uses: actions/setup-java@v1
+        java-version: 17
       steps:
-        - name: Checkout
-        - uses: actions/checkout@v3
-
         - name: mvn test
-          run: mvn test
+        - run: mvn test
