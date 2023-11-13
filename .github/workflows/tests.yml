@@ -6,20 +6,15 @@ jobs:
       name: Exécuter les tests JUnit
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v3
         - name: Checkout
+        - uses: actions/checkout@v3
 
-        - name: JDK
+        - name: mvn test
+          run: mvn test
         - uses: actions/setup-java@v1
           with:
-            java-version: '21'
-            distribution: 'openjdk'
+            java-version: '17'
 
-        - name: build
-          run: mvn -B package --file pom.xml
-
-        - name: test
-          run: mvn -B test --file pom.xml
         - name: report
           uses: mikepenz/action-junit-report@v2
           if: always()
