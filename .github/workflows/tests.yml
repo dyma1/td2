@@ -11,15 +11,3 @@ jobs:
 
         - name: mvn test
           run: mvn test
-        - uses: actions/setup-java@v1
-          with:
-            java-version: '17'
-
-        - name: report
-          uses: mikepenz/action-junit-report@v2
-          if: always()
-          with:
-            name: JUnit Report
-            path: 'target/surefire-reports/TEST-*.xml'
-            reporter: 'GitHub Actions'
-            fail_on_error: false
