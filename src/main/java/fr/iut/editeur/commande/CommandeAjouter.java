@@ -9,6 +9,9 @@ public class CommandeAjouter extends CommandeDocument {
         super(document, parameters);
     }
 
+    /**
+     * Ajoute le texte passé en paramètre au document
+     */
     @Override
     public void executer() {
         if(parameters.length < 2) {

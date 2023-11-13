@@ -34,9 +34,19 @@ public class Document {
         texte = (texte.substring(start, end)).toUpperCase();
         remplacer(start, end, texte);
     }
+
+    /**
+     * Efface le texte entre les positions debut et fin
+     * @param debut position de début
+     * @param fin position de fin
+     */
     public void effacer(int debut, int fin){
         remplacer(debut, fin, "");
     }
+
+    /**
+     * Efface tout le texte du document
+     */
     public void clear(){
         effacer(0, getTexte().length());
     }

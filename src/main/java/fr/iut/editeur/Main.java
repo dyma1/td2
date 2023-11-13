@@ -18,6 +18,7 @@ public class Main {
             String[] parameters = input.split(";");
             String nomCommande = parameters[0];
             Commande commande = factory.createCommand(nomCommande, document, parameters);
+            Commande ancienneCommande = factory.createCommand(nomCommande, document, parameters);
             if(commande != null) {
                 invoker.executer(commande);
             }
